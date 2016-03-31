@@ -1,1 +1,17 @@
-<h1>Home Page</h1>
+<section class="jumbotron">
+	<h1 id="home-title">Bloc Chat</h1>
+	<p id="home-tagline">Exercise Your Right To Be Opinionated</p>
+</section>
+
+<div class="col-md-3 sidebar">
+	<div class="header">
+		<p class="title">Chat Rooms</p>
+	</div>
+	
+	<section class="rooms-list">
+		<div ng-repeat="room in home.chatRooms">
+			<p>{{ room.name }}</p>
+		</div>
+	</section>
+</div>
+
