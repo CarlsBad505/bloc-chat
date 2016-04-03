@@ -26,3 +26,7 @@
 	margin: auto;
 	padding-top: 15px;
 }
+
+.sidebar .rooms-list .chatrooms {
+	text-align: center;
+}
