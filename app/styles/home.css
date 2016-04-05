@@ -22,6 +22,10 @@
 	font-size: 30px;
 }
 
+.sidebar .header .new-chat-room {
+	text-align: center;
+}
+
 .sidebar .rooms-list {
 	margin: auto;
 	padding-top: 15px;
