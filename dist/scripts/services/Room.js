@@ -14,11 +14,11 @@
 			return {
 				all: roomRef
 			}
-		};
+		}
 		
 		function addRoom(name) {
 			roomRef.$add(name);
-		};
+		}
 	}
 	
 	angular
