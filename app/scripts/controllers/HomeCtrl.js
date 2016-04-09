@@ -1,8 +1,13 @@
 (function() {
 	function HomeCtrl(Room, $uibModal){
-		this.chatRooms = Room.getRooms().all;
+		var vm = this;
+		vm.chatRooms = Room.getRooms().all;
+        vm.selectRoom = function(room) {
+			vm.selectedRoom = room;
+			vm.messages = Room.getMessages(this.selectedRoom.$id);
+		}
 		
-		this.openModal = function() {
+		vm.openModal = function() {
 			var modal_instance = $uibModal.open({
 				templateUrl: '/templates/modal.html',
 				controller: function ($scope, $uibModalInstance) {

@@ -5,7 +5,8 @@
 		
 		var rooms = {
 			getRooms: getRooms,
-			addRoom: addRoom
+			addRoom: addRoom,
+			getMessages: getMessages
 		};
 		
 		return rooms;
@@ -19,6 +20,11 @@
 		function addRoom(name) {
 			roomRef.$add(name);
 		}
+		
+		function getMessages(roomId) {
+			return $firebaseArray(firebaseRef.child('messages').orderByChild("roomID").equalTo(roomId));
+		}
+
 	}
 	
 	angular

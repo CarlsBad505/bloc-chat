@@ -7,15 +7,20 @@
 	<div class="header">
 		<p class="title">Chat Rooms</p>
 		<div class="new-chat-room">
-			<button class="btn btn-primary" ng-click="home.openModal()"><strong>+</strong> New Chat Room</button>
+			<button class="btn btn-primary" ng-click="vm.openModal()"><strong>+</strong> New Chat Room</button>
 		</div>
 	</div>
 	
 	<section class="rooms-list">
-		<div ng-repeat="room in home.chatRooms" class="chatrooms">
-			<p>{{ room.name }}</p>
-<!--			<p>{{ home.chatRooms }}</p>-->
+		<div ng-repeat="room in vm.chatRooms" class="chatrooms">
+			<a ng-click="vm.selectRoom(room)">{{ room.name }}</a>
 		</div>
 	</section>
 </div>
 
+<div class="col-md-9 chatroom">
+	<h3>{{ vm.selectedRoom.name }}</h3>
+	<p ng-repeat="message in vm.messages">
+		<strong>{{ message.username }}:</strong> {{ message.content }}
+	</p>
+</div>

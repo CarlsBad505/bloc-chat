@@ -34,3 +34,9 @@
 .sidebar .rooms-list .chatrooms {
 	text-align: center;
 }
+
+.chatroom {
+	background-color: ghostwhite;
+	height: 1000px;
+	float: right;
+}
