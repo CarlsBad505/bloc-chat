@@ -8,7 +8,7 @@
 		}
 		
 		vm.openModal = function() {
-			var modal_instance = $uibModal.open({
+			var modalInstance = $uibModal.open({
 				templateUrl: '/templates/modal.html',
 				controller: function ($scope, $uibModalInstance) {
 					$scope.newRoom = {name: ''};
@@ -23,7 +23,7 @@
 				size: 'md',
 			});
 			
-			modal_instance.result.then(function(data) {
+			modalInstance.result.then(function(data) {
 				Room.addRoom(data);
 			});
 		};
