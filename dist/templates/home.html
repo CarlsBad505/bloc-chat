@@ -21,6 +21,14 @@
 <div class="col-md-9 chatroom">
 	<h3>{{ vm.selectedRoom.name }}</h3>
 	<p ng-repeat="message in vm.messages">
-		<strong>{{ message.username }}:</strong> {{ message.content }}
+		<strong>{{ message.username }} ({{ message.sentAt }}):</strong>  {{ message.content }}
 	</p>
+	
+	<form>
+		<div class="col-md-8 message-input">
+			<input type="text" placeholder="Write your message here..." class="form-control" ng-model="vm.newMessage">
+		</div>
+		<button class="col-md-1 btn btn-success" type="button" ng-click="vm.sendMessage()">Send</button>
+	</form>
 </div>
+

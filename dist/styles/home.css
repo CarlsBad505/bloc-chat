@@ -40,3 +40,7 @@
 	height: 1000px;
 	float: right;
 }
+
+.chatroom .message-input {
+	float: left;
+}
